@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog Post Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO -->
+    <meta name="description" content="Blog Post Page">
+    <meta name="keywords" content="HTML, BLOG, SEO, POST, tags, PAGE">
+    <meta name="author" content="ED F"></head>
+<body>
+    <header>
+        <a href="/" aria-label="На главную страницу блога">
+            <strong>DevBlog</strong>
+        </a>
+
+        <nav aria-label="Основное меню">
+            <ul>
+                <li><a href="/articles">Articles</a></li>
+                <li><a href="/tutorials">Lessons</a></li>
+                <li><a href="/about">About the author</a></li>
+                <li><a href="/contact">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <h1>The Power of Semantic HTML: Why Correct Code Matters</h1>
+
+            <p>
+                Published: <time datetime="2025-01-15">15 January 2025</time> &bull;
+                Author: <a href="/author/anna" rel="author">Anna Webber</a> &bull;
+                <span aria-label="Время чтения">6 minutes of reading</span>
+            </p>
+
+            <p> 
+                In the world of web development, you can often hear the phrase: 
+                <q>write semantic HTML</q>. 
+                But what does this actually mean and why is it so important? In this article, we will break down how proper markup affects 
+                <strong>SEO</strong>, 
+                <strong>accessibility</strong>, and 
+                <strong>long-term maintainability</strong> of your code. 
+            </p>
+
+            <section>
+                <h2>What is semantic markup?</h2>
+                <p> 
+                    <dfn>Semantic HTML</dfn> 
+                    is an approach to markup where HTML tags are used for their intended purpose, rather than for visual styling. Instead of using 
+                    <code>&lt;div&gt;</code> for everything, you choose tags that 
+                    <em>describe the meaning</em> of the content contained within them. 
+                </p>
+
+                <h3>Comparison: semantic vs. non-semantic code</h3>
+                <p>
+                    Let's look at a simple example of creating a button.
+                </p>
+
+                <pre><code>
+    &lt;!-- ❌ Non-semantic approach --&gt;
+            &lt;div class="button" onclick="submit()"&gt;Send&lt;/div&gt;
+        
+    &lt;!-- ✅ Semantic approach --&gt;
+            &lt;button type="submit"&gt;Send&lt;/button&gt;</code></pre>
+
+                <p>
+                    In the second case, the browser, screen reader, and search engine 
+                    immediately understand that this is a <strong>button</strong>, not 
+                    just an <em>element with a class</em>. This provides many 
+                    advantages, which we will explore further.
+                </p>
+            </section>
+
+            <section>
+                <h2>Key Benefits of Semantic HTML</h2>
+
+                <h3>1. Improved SEO</h3>
+                <p>
+                    Search engines, such as Google, use HTML tags 
+                    to understand the structure and content of a page. 
+                    <strong>Proper use of headings</strong> 
+                    (<code>&lt;h1&gt;</code> — <code>&lt;h6&gt;</code>), 
+                    lists, and other semantic elements helps 
+                    robots index your site more accurately and improve 
+                    its positions in search results.
+                </p>
+
+                <h3>2. Increased Availability (Accessibility)</h3>
+                <p>
+                    Screen readers and other assistive technologies 
+                    <em>rely</em> on semantic markup to 
+                    correctly interpret content for people with 
+                    visual impairments. For example:
+                </p>
+                <ul>
+                    <li>
+                        <strong>Headings</strong> allow quick 
+                        navigation through the page using a keyboard.
+                    </li>
+                    <li>
+                        <strong>Lists</strong> inform the user 
+                        how many items they can expect to see.
+                    </li>
+                    <li>
+                        <strong>The <code>&lt;main&gt;</code> tag</strong> 
+                        allows jumping directly to the main content, 
+                        skipping repeated blocks.
+                    </li>
+                </ul>
+
+                <h3>3. Code cleanliness and maintainability</h3>
+                <p>
+                    When the document structure is obvious, it is easier to read, 
+                    maintain, and hand over to other developers. 
+                    This reduces the likelihood of errors and speeds up the 
+                    implementation of new features. As one famous developer said:
+                </p>
+
+                <blockquote>
+                    <p>
+                        Semantic HTML is not about design. It is about 
+                        <strong>meaning</strong>. When you write code, you 
+                        are first and foremost communicating with other developers 
+                        and with the machines that will read your code.
+                    </p>
+                    <footer>
+                        — <cite>Tim Berners-Lee, creator of the World Wide Web</cite>
+                    </footer>
+                </blockquote>
+            </section>
+
+            <section>
+                <h2>Practical examples of semantic tags</h2>
+
+                <h3>Tag <code>&lt;figure&gt;</code> и <code>&lt;figcaption&gt;</code></h3>
+                <p>
+                    These tags are used to embed illustrative 
+                    content — images, diagrams, code blocks — with a 
+                    caption. They link the image with its description, 
+                    which is important for accessibility and context.
+                </p>
+
+                <figure>
+                    <img 
+                        src="https://avatars.mds.yandex.net/i?id=3cbbcb4022fb7418d1edcba7bee12eeb33faeaf8-17657564-images-thumbs&n=13" 
+                        alt="Diagram showing the difference between semantic and non-semantic approaches: on the left are boxes with inscriptions (div), on the right are structured blocks with names (header, article, section)"
+                        width="800"
+                        height="400"
+                        loading="lazy"
+                    >
+                    <figcaption>
+                        Fig. 1. Comparison of semantic and non-semantic approaches 
+                        to building a page. On the left — <code>&lt;div&gt;</code> with classes, 
+                        on the right — meaningful tags.
+                    </figcaption>
+                </figure>
+
+                <h3>Quotes and links</h3>
+                <p>
+                    The tags <code>&lt;blockquote&gt;</code> (for block quotes) 
+                    and <code>&lt;q&gt;</code> (for inline quotes) are used 
+                    for embedding quotations. It is always important to 
+                    specify the <strong>source</strong> using 
+                    <code>&lt;cite&gt;</code>.
+                </p>
+                <p>
+                    According to developer <cite>Jeremy Keith</cite>, 
+                    <q>semantic HTML is the foundation of progressive 
+                    enhancement</q>, and it is hard to disagree with that.
+                </p>
+
+                <h3>Code and technical documentation</h3>
+                <p>
+                    For embedding code, use <code>&lt;code&gt;</code> 
+                    for inline strings and <code>&lt;pre&gt;</code> for blocks. This 
+                    preserves formatting and improves readability.
+                </p>
+                <pre><code>&lt;!-- Example of semantic page structure --&gt;
+        &lt;body&gt;
+          &lt;header&gt;
+            &lt;nav&gt;...&lt;/nav&gt;
+          &lt;/header&gt;
+          
+          &lt;main&gt;
+            &lt;article&gt;
+              &lt;h1&gt;Article title&lt;/h1&gt;
+              &lt;p&gt;Text...&lt;/p&gt;
+            &lt;/article&gt;
+          &lt;/main&gt;
+          
+          &lt;footer&gt;
+            &lt;p&gt;Copyright&lt;/p&gt;
+          &lt;/footer&gt;
+        &lt;/body&gt;</code></pre>
+            </section>
+
+            <section>
+                <h2>Conclusion</h2>
+                <p>
+                    Semantic HTML is <strong>not just</strong> 
+                    a good practice. It is the <strong>foundation of the modern 
+                    web</strong>, which ensures accessibility, 
+                    SEO optimization, and long-term maintainability 
+                    of your projects. Start applying these principles 
+                    today, and you will notice how your code becomes cleaner 
+                    and your users — more grateful.
+                </p>
+                <p>
+                    Want to learn more? I recommend checking out 
+                    <a href="https://developer.mozilla.org/ru/docs/Web/HTML"> 
+                    the MDN documentation on HTML</a> and studying 
+                    <a href="https://www.w3.org/TR/wai-aria/"> 
+                    the WAI-ARIA specifications</a> for in-depth work with 
+                    accessibility.
+                </p>
+            </section>
+
+            <footer aria-label="Article meta-information">
+                <p>
+                    <strong>Tags:</strong> 
+                    <a href="/tag/html">HTML</a>, 
+                    <a href="/tag/semantics">Semantic</a>, 
+                    <a href="/tag/accessibility">Accessibility</a>, 
+                    <a href="/tag/seo">SEO</a>
+                </p>
+                <p>
+                    <strong>Category:</strong> 
+                    <a href="/category/web-development">Web-development</a>
+                </p>
+            </footer>
+        </article>
+
+        <aside aria-label="Related articles">
+            <h2>Read also</h2>
+            <ul>
+                <li>
+                    <a href="/article/css-grid-vs-flexbox">
+                        CSS Grid or Flexbox: what to choose?
+                    </a>
+                </li>
+                <li>
+                    <a href="/article/aria-basics">
+                        WAI-ARIA Basics for Beginners
+                    </a>
+                </li>
+                <li>
+                    <a href="/article/performance-optimization">
+                        How to speed up website loading: complete guide
+                    </a>
+                </li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; all rights reserved 2026</p>
+    </footer>
+</body>
+</html>

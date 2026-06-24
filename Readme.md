@@ -36,3 +36,15 @@ https://roadmap.sh/projects/pricing-comparison-table
 ## How to View
 
 Open `Pricing.html` in any browser.
+
+# Blog Post Page
+
+https://roadmap.sh/projects/blog-post-page
+
+## Files
+
+- `Blog.html` — single project file with blog post page
+
+## How to View
+
+Open `Blog.html` in any browser.
