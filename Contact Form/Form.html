@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO -->
+    <meta name="description" content="Contact Form">
+    <meta name="keywords" content="HTML, BLOG, SEO, FORM, tags, PAGE">
+    <meta name="author" content="ED F">
+</head>
+<body>
+    <header>
+        <a href="/" aria-label="Home page">
+            <strong>DevConnect</strong>
+        </a>
+        <nav aria-label="Main menu">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About the company</a></li>
+                <li><a href="/contact">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Feedback form</h1>
+        <p>
+            Fill out the form below and we will contact you shortly.
+            <span aria-label="Required fields are marked with an asterisk">* — required fields</span>
+        </p>
+
+        <form 
+            action="https://example.com/contact" 
+            method="post"
+            autocomplete="on"
+            novalidate
+        >
+            <div>
+                <label for="full-name">
+                    Full name <span aria-hidden="true">*</span>
+                </label>
+                <input 
+                    type="text" 
+                    id="full-name" 
+                    name="full_name" 
+                    required 
+                    placeholder="Ivan Ivanov"
+                    autocomplete="name"
+                >
+            </div>
+
+            <div>
+                <label for="email">
+                    Email <span aria-hidden="true">*</span>
+                </label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    required 
+                    placeholder="ivan@example.com"
+                    autocomplete="email"
+                >
+            </div>
+
+            <div>
+                <label for="phone">Phone</label>
+                <input 
+                    type="tel" 
+                    id="phone" 
+                    name="phone" 
+                    placeholder="+7 (999) 123-45-67"
+                    autocomplete="tel"
+                >
+            </div>
+
+            <div>
+                <label for="subject">
+                    Subject of the appeal <span aria-hidden="true">*</span>
+                </label>
+                <select id="subject" name="subject" required>
+                    <option value="">-- Select a topic --</option>
+                    <option value="general">General question</option>
+                    <option value="support">Technical support</option>
+                    <option value="sales">Cooperation and sales</option>
+                    <option value="feedback">Feedback or suggestion</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="message">
+                    Message <span aria-hidden="true">*</span>
+                </label>
+                <textarea 
+                    id="message" 
+                    name="message" 
+                    required 
+                    minlength="20"
+                    placeholder="Describe your question in more detail..."
+                    rows="6"
+                ></textarea>
+                <small>Minimum 20 characters</small>
+            </div>
+
+            <fieldset>
+                <legend>
+                    How did you find out about us? <span aria-hidden="true">*</span>
+                </legend>
+
+                <div>
+                    <input 
+                        type="radio" 
+                        id="hear-search" 
+                        name="hear_about" 
+                        value="search"
+                        required
+                    >
+                    <label for="hear-search">Search engine</label>
+                </div>
+
+                <div>
+                    <input 
+                        type="radio" 
+                        id="hear-social" 
+                        name="hear_about" 
+                        value="social"
+                    >
+                    <label for="hear-social">Social media</label>
+                </div>
+
+                <div>
+                    <input 
+                        type="radio" 
+                        id="hear-friend" 
+                        name="hear_about" 
+                        value="friend"
+                    >
+                    <label for="hear-friend">By recommendation</label>
+                </div>
+
+                <div>
+                    <input 
+                        type="radio" 
+                        id="hear-ad" 
+                        name="hear_about" 
+                        value="ad"
+                    >
+                    <label for="hear-ad">Advertising</label>
+                </div>
+
+                <div>
+                    <input 
+                        type="radio" 
+                        id="hear-other" 
+                        name="hear_about" 
+                        value="other"
+                    >
+                    <label for="hear-other">Other</label>
+                </div>
+            </fieldset>
+
+            <div>
+                <input 
+                    type="checkbox" 
+                    id="newsletter" 
+                    name="newsletter" 
+                    value="yes"
+                >
+                <label for="newsletter">
+                    I want to receive news and updates by email
+                </label>
+            </div>
+
+            <button type="submit">Send message</button>
+
+            <p>
+                <small>
+                    By clicking "Send message", you agree to 
+                    <a href="/privacy">personal data processing policy</a>.
+                </small>
+            </p>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; all rights reserved 2026</p>
+    </footer>
+</body>
+</html>
