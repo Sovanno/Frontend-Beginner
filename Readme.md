@@ -60,3 +60,15 @@ https://roadmap.sh/projects/contact-form
 ## How to View
 
 Open `Form.html` in any browser.
+
+# Photo Showcase
+
+https://roadmap.sh/projects/photo-showcase
+
+## Files
+
+- `Showcase.html` — single project file with photo showcase
+
+## How to View
+
+Open `Showcase.html` in any browser.
