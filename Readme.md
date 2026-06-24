@@ -24,3 +24,15 @@ https://roadmap.sh/projects/basic-html-website
 ## How to View
 
 Open `Homepage.html` in any browser. Navigation between all pages is available via the header menu.
+
+# Pricing Comparison Table
+
+https://roadmap.sh/projects/pricing-comparison-table
+
+## Files
+
+- `Pricing.html` — single project file with comparison table
+
+## How to View
+
+Open `Pricing.html` in any browser.
