@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background: #f1f5f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: #0f172a;
+}
+
+/* ========== Grid контейнер ========== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 200px;
+    gap: 12px;
+}
+
+/* ========== Общие стили для ячеек ========== */
+.grid-item {
+    overflow: hidden;
+    border-radius: 16px;
+    background: #e2e8f0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 20px 30px -8px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.grid-item:hover img {
+    transform: scale(1.05);
+}
+
+/* ========== Позиционирование больших элементов ========== */
+.item-1 {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+}
+
+.item-2 {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+
+.item-3 {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+
+.item-4 {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+}
+
+.item-5 {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+
+.item-6 {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+}
+
+/* ========== Адаптивность ========== */
+/* Планшеты: 2 колонки, все ячейки одинаковые */
+@media (max-width: 768px) {
+    .grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 200px;
+    }
+
+    /* Сбрасываем явное позиционирование, чтобы элементы шли по порядку */
+    .item-1,
+    .item-2,
+    .item-3,
+    .item-4,
+    .item-5,
+    .item-6 {
+    grid-column: auto;
+    grid-row: auto;
+    }
+}
+
+/* Телефоны: 1 колонка */
+@media (max-width: 480px) {
+    .grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 200px;
+    }
+
+    .grid-item {
+    border-radius: 12px;
+    }
+}
+
+/* ========== Уважение к reduced motion ========== */
+@media (prefers-reduced-motion: reduce) {
+    .grid-item,
+    .grid-item img {
+    transition: none;
+    }
+    .grid-item:hover {
+    transform: none;
+    box-shadow: none;
+    }
+    .grid-item:hover img {
+    transform: none;
+    }
+}
