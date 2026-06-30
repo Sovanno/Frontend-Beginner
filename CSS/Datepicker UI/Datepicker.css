@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: #f1f5f9;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+/* ========== Контейнер Datepicker ========== */
+.datepicker {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 1.8rem 1.8rem 1.5rem;
+    box-shadow: 0 20px 35px -8px rgba(0, 0, 0, 0.12);
+    max-width: 420px;
+    width: 100%;
+    transition: box-shadow 0.3s;
+}
+
+.datepicker:hover {
+    box-shadow: 0 25px 40px -10px rgba(0, 0, 0, 0.18);
+}
+
+/* ========== Заголовок (месяц + год + навигация) ========== */
+.datepicker-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.datepicker-header .month-year {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #0f172a;
+    letter-spacing: -0.01em;
+}
+
+.datepicker-header .nav-btn {
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #94a3b8;
+    padding: 0.3rem 0.6rem;
+    border-radius: 8px;
+    transition: background 0.2s, color 0.2s;
+    line-height: 1;
+}
+
+.datepicker-header .nav-btn:hover {
+    background: #f1f5f9;
+    color: #0f172a;
+}
+
+/* ========== Дни недели ========== */
+.weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-bottom: 0.5rem;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #94a3b8;
+    letter-spacing: 0.04em;
+}
+
+/* ========== Сетка дней ========== */
+.days-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+}
+
+/* ========== Ячейка дня ========== */
+.day-cell {
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #0f172a;
+    border-radius: 50%;
+    background: transparent;
+    cursor: default;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    position: relative;
+}
+
+/* Пустые ячейки (без числа) */
+.day-cell.empty {
+    visibility: hidden;
+}
+
+/* Числа */
+.day-cell:not(.empty) {
+    cursor: pointer;
+}
+
+.day-cell:not(.empty):hover {
+    background: #eef2ff;
+    color: #1d4ed8;
+}
+
+/* ========== Сегодня (текущая дата) ========== */
+.day-cell.today {
+    background: #2563eb;
+    color: white;
+    font-weight: 700;
+    box-shadow: 0 4px 8px rgba(37, 99, 235, 0.25);
+}
+
+.day-cell.today:hover {
+    background: #1d4ed8;
+    box-shadow: 0 6px 12px rgba(37, 99, 235, 0.35);
+}
+
+/* ========== Выбранная дата ========== */
+.day-cell.selected {
+    background: #dbeafe;
+    color: #1d4ed8;
+    font-weight: 600;
+    box-shadow: inset 0 0 0 2px #2563eb;
+}
+
+.day-cell.selected:hover {
+    background: #bfdbfe;
+}
+
+/* ========== Адаптивность ========== */
+@media (max-width: 480px) {
+    .datepicker {
+    padding: 1.2rem 1rem 1rem;
+    }
+
+    .datepicker-header .month-year {
+    font-size: 1.1rem;
+    }
+
+    .datepicker-header .nav-btn {
+    font-size: 1.3rem;
+    padding: 0.2rem 0.4rem;
+    }
+
+    .day-cell {
+    font-size: 0.9rem;
+    }
+
+    .weekdays {
+    font-size: 0.7rem;
+    }
+}
+
+/* ========== Уважение к reduced motion ========== */
+@media (prefers-reduced-motion: reduce) {
+    .day-cell {
+    transition: none;
+    }
+}
