@@ -169,3 +169,16 @@ https://roadmap.sh/projects/tooltip-ui
 ## How to View
 
 Open `Tooltip.html` in any browser.
+
+# Pricing Cards
+
+https://roadmap.sh/projects/pricing-cards
+
+## Files
+
+- `P_Cards.html` — single project file with Pricing Cards
+- `P_Cards.css` — single style file for Pricing Cards
+
+## How to View
+
+Open `P_Cards.html` in any browser.
