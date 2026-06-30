@@ -156,3 +156,16 @@ https://roadmap.sh/projects/image-grid
 ## How to View
 
 Open `ImageGrid.html` in any browser.
+
+# Tooltip UI
+
+https://roadmap.sh/projects/tooltip-ui
+
+## Files
+
+- `Tooltip.html` — single project file with Tooltip UI
+- `Tooltip.css` — single style file for Tooltip UI
+
+## How to View
+
+Open `Tooltip.html` in any browser.

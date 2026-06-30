@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: #f1f5f9;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* ========== Навигация ========== */
+nav {
+    display: flex;
+    gap: 2.5rem;
+    background: #ffffff;
+    padding: 1.2rem 2rem;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px -8px rgba(0, 0, 0, 0.08);
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* ========== Элемент навигации ========== */
+.nav-item {
+    position: relative;
+    display: inline-block;
+    padding: 0.5rem 0;
+    cursor: pointer;
+    text-decoration: none;
+    color: #0f172a;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.25s;
+}
+
+.nav-item:hover {
+    color: #2563eb;
+}
+
+/* ========== Общие стили тултипа ========== */
+.nav-item[data-tooltip]::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 12px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: #0f172a;
+    color: #f8fafc;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s, transform 0.3s;
+    z-index: 10;
+}
+
+/* Маленькая стрелка внизу тултипа */
+.nav-item[data-tooltip]::after {
+    content: '';
+    position: absolute;
+    bottom: calc(100% + 4px);
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: #0f172a;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* Появление тултипа при наведении */
+.nav-item:hover[data-tooltip]::before,
+.nav-item:hover[data-tooltip]::after {
+    opacity: 1;
+}
+
+/* ========== Разные анимации ========== */
+
+/* 1. Fade-in (простое появление) */
+.nav-item.tooltip-fade[data-tooltip]::before,
+.nav-item.tooltip-fade[data-tooltip]::after {
+    transition: opacity 0.3s ease;
+}
+.nav-item.tooltip-fade:hover[data-tooltip]::before,
+.nav-item.tooltip-fade:hover[data-tooltip]::after {
+    transform: translateX(-50%) translateY(0);
+}
+
+/* 2. Slide-in (сдвиг снизу) */
+.nav-item.tooltip-slide[data-tooltip]::before {
+    transform: translateX(-50%) translateY(10px);
+    transition: opacity 0.3s, transform 0.3s ease-out;
+}
+.nav-item.tooltip-slide[data-tooltip]::after {
+    transform: translateX(-50%) translateY(6px);
+    transition: opacity 0.3s, transform 0.3s ease-out;
+}
+.nav-item.tooltip-slide:hover[data-tooltip]::before {
+    transform: translateX(-50%) translateY(0);
+}
+.nav-item.tooltip-slide:hover[data-tooltip]::after {
+    transform: translateX(-50%) translateY(0);
+}
+
+/* 3. Scale-in (увеличение) */
+.nav-item.tooltip-scale[data-tooltip]::before {
+    transform: translateX(-50%) scale(0.8);
+    transition: opacity 0.3s, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.nav-item.tooltip-scale[data-tooltip]::after {
+    transform: translateX(-50%) scale(0.8);
+    transition: opacity 0.3s, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.nav-item.tooltip-scale:hover[data-tooltip]::before,
+.nav-item.tooltip-scale:hover[data-tooltip]::after {
+    transform: translateX(-50%) scale(1);
+}
+
+/* ========== Адаптивность ========== */
+@media (max-width: 600px) {
+    nav {
+    gap: 1.2rem;
+    padding: 0.8rem 1.2rem;
+    border-radius: 16px;
+    }
+    .nav-item {
+    font-size: 0.9rem;
+    }
+    .nav-item[data-tooltip]::before {
+    font-size: 0.7rem;
+    padding: 4px 10px;
+    bottom: calc(100% + 10px);
+    }
+    .nav-item[data-tooltip]::after {
+    bottom: calc(100% + 2px);
+    border-width: 5px;
+    }
+}
+
+/* ========== Уважение к reduced motion ========== */
+@media (prefers-reduced-motion: reduce) {
+    .nav-item[data-tooltip]::before,
+    .nav-item[data-tooltip]::after {
+    transition: opacity 0.01ms;
+    }
+    .nav-item.tooltip-slide[data-tooltip]::before,
+    .nav-item.tooltip-slide[data-tooltip]::after,
+    .nav-item.tooltip-scale[data-tooltip]::before,
+    .nav-item.tooltip-scale[data-tooltip]::after {
+    transform: translateX(-50%) translateY(0) scale(1);
+    }
+}
