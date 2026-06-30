@@ -182,3 +182,19 @@ https://roadmap.sh/projects/pricing-cards
 ## How to View
 
 Open `P_Cards.html` in any browser.
+
+
+<!-- JavaScript tasks -->
+
+
+# Greeting Builder
+
+https://roadmap.sh/projects/js-greeting-builder
+
+## Files
+
+- `greeting.js` — single project file with Greeting Builder
+
+## How to View
+
+run `greeting.js` in any JS compiler.
