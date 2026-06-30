@@ -143,3 +143,16 @@ https://roadmap.sh/projects/accessible-form-ui
 ## How to View
 
 Open `FormUI.html` in any browser.
+
+# Image Grid Layout
+
+https://roadmap.sh/projects/image-grid
+
+## Files
+
+- `ImageGrid.html` — single project file with Image Grid Layout
+- `ImageGrid.css` — single style file for Image Grid Layout
+
+## How to View
+
+Open `ImageGrid.html` in any browser.
