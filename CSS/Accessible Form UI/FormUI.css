@@ -1,0 +1,292 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: #f8fafc;
+    color: #0f172a;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+    line-height: 1.5;
+}
+
+/* ========== Контейнер формы ========== */
+.form-container {
+    max-width: 700px;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 28px;
+    padding: 2.5rem 2rem;
+    box-shadow: 0 20px 35px -8px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e2e8f0;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    letter-spacing: -0.02em;
+}
+
+.subtitle {
+    color: #475569;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+/* ========== Стили формы ========== */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    font-size: 0.95rem;
+}
+
+.label-hint {
+    font-weight: 400;
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-left: 0.3rem;
+}
+
+.form-group input{
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.form-group input:focus-within {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+#full-name, #email {
+    flex: 1;
+    border: none;
+    border: 2px solid #e2e8f0;
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+    background: transparent;
+    color: #0f172a;
+    outline: none;
+    font-family: inherit;
+    min-width: 0;
+}
+
+#full-name:focus-within{
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+#email:focus-within{
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+#full-name::placeholder {
+    color: #94a3b8;
+}
+
+#email::placeholder {
+    color: #94a3b8;
+}
+
+/* Поле ввода с кнопкой показа пароля */
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.input-wrapper:focus-within {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+.input-wrapper input {
+    flex: 1;
+    border: none;
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+    background: transparent;
+    color: #0f172a;
+    outline: none;
+    font-family: inherit;
+    min-width: 0;
+}
+
+.input-wrapper input::placeholder {
+    color: #94a3b8;
+}
+
+/* Кнопка показа/скрытия пароля */
+.toggle-password {
+    background: transparent;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #2563eb;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: color 0.2s;
+    font-family: inherit;
+}
+
+.toggle-password:hover,
+.toggle-password:focus-visible {
+    color: #1d4ed8;
+}
+
+.toggle-password:focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* ========== Сообщения об ошибках ========== */
+.error-message {
+    font-size: 0.85rem;
+    color: #dc2626;
+    margin-top: 0.3rem;
+    min-height: 1.2em;
+    transition: opacity 0.2s;
+}
+
+/* ========== Прогресс-бар ========== */
+.progress-section {
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 0.4rem;
+}
+
+.progress-track {
+    width: 100%;
+    height: 8px;
+    background: #e2e8f0;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 100%; /* здесь 100% – все требования выполнены */
+    background: #2563eb;
+    border-radius: 999px;
+    transition: width 0.3s;
+}
+
+/* ========== Чеклист требований ========== */
+.requirements {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+}
+
+.requirements li {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.3rem 0;
+    font-size: 0.95rem;
+    color: #0f172a;
+}
+
+.requirements li .icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.requirements li .icon.success {
+    background: #22c55e;
+    color: white;
+}
+
+.requirements li .icon.fail {
+    background: #dc2626;
+    color: white;
+}
+
+/* ========== Кнопка отправки ========== */
+.submit-btn {
+    width: 100%;
+    padding: 0.9rem;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.25s, transform 0.1s;
+    font-family: inherit;
+}
+
+.submit-btn:hover {
+    background: #1d4ed8;
+}
+
+.submit-btn:active {
+    transform: scale(0.98);
+}
+
+.submit-btn:focus-visible {
+    outline: 3px solid #2563eb;
+    outline-offset: 3px;
+}
+
+/* ========== Адаптивность ========== */
+@media (max-width: 640px) {
+    .form-container {
+    padding: 1.5rem 1.2rem;
+    }
+
+    h1 {
+    font-size: 1.6rem;
+    }
+
+    .input-wrapper {
+    flex-wrap: wrap;
+    }
+
+    .toggle-password {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.8rem;
+    }
+}
+
+/* ========== Уважение к reduced motion ========== */
+@media (prefers-reduced-motion: reduce) {
+    * {
+    transition-duration: 0.01ms !important;
+    }
+}
