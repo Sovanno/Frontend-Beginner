@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700&display=swap');
+
+/* ========== Сброс и базовые стили ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: #f1f5f9;
+  color: #0f172a;
+  padding: 3rem 1.5rem;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.25rem;
+}
+
+.subtitle {
+  text-align: center;
+  color: #475569;
+  margin-bottom: 3rem;
+  font-size: 1.1rem;
+}
+
+/* ========== Сетка карточек ========== */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: stretch;
+}
+
+/* ========== Общие стили для карточек ========== */
+.card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 1.8rem 1.8rem 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.3s ease;
+  border: 1px solid #e2e8f0;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 30px -8px rgba(0, 0, 0, 0.12);
+}
+
+.card-body {
+  flex: 1;
+}
+
+.card-body p {
+  font-size: 1rem;
+  color: #1e293b;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+/* ========== Карточка с аватаркой ========== */
+.card-avatar .card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card-meta h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.card-meta span {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+/* ========== Карточка с рейтингом ========== */
+.stars {
+  color: #f59e0b;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  margin-bottom: 0.75rem;
+}
+
+.card-rating .card-footer {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.2rem;
+}
+
+.card-rating .author {
+  font-weight: 600;
+}
+
+.card-rating .role {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+/* ========== Карточка с цитатой ========== */
+.card-quote {
+  position: relative;
+  overflow: hidden;
+}
+
+.quote-icon {
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  font-size: 6rem;
+  color: #e2e8f0;
+  font-family: 'Georgia', serif;
+  line-height: 1;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.card-quote .card-footer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.avatar-small {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card-quote .card-footer div {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-quote .card-footer strong {
+  font-size: 1rem;
+}
+
+.card-quote .card-footer span {
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+/* ========== Карточка с тенью (минималистичная) ========== */
+.card-shadow {
+  border: none;
+  background: #ffffff;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.card-shadow .card-footer {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.2rem;
+}
+
+.card-shadow .author {
+  font-weight: 600;
+}
+
+.card-shadow .role {
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+/* ========== Карточка с градиентом ========== */
+.card-gradient {
+  background: linear-gradient(145deg, #f8fafc, #ffffff);
+  border: 1px solid #e2e8f0;
+  position: relative;
+}
+
+.card-gradient .company {
+  font-weight: 700;
+  color: #2563eb;
+  letter-spacing: 0.5px;
+}
+
+.card-gradient .author {
+  font-weight: 600;
+  color: #0f172a;
+  margin-left: 0.3rem;
+}
+
+.card-gradient .card-footer {
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* ========== Адаптивность ========== */
+/* Планшет: 2 колонки */
+@media (max-width: 1024px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Мобильные: 1 колонка */
+@media (max-width: 640px) {
+  body {
+    padding: 1.5rem 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  .quote-icon {
+    font-size: 4rem;
+    right: 15px;
+  }
+
+  .card-avatar .card-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .card-rating .card-footer,
+  .card-shadow .card-footer {
+    align-items: center;
+  }
+}
+
+/* ========== Уважение к reduced motion ========== */
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    transition: none;
+  }
+  .card:hover {
+    transform: none;
+  }
+}
