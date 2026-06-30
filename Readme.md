@@ -86,8 +86,21 @@ https://roadmap.sh/projects/portfolio-website
 
 ## Files
 
-- `Portfolio.css` — single project file with photo showcase
+- `Portfolio.css` — single style file for Basic HTML Website
 
 ## How to View
 
 Open `Homepage.html` in any browser.
+
+# Changelog Component
+
+https://roadmap.sh/projects/changelog-component
+
+## Files
+
+- `Changelog.html` — single project file with Changelog Component
+- `Changelog.css` — single style file for Changelog Component
+
+## How to View
+
+Open `Changelog.html` in any browser.
