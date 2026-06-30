@@ -193,8 +193,20 @@ https://roadmap.sh/projects/js-greeting-builder
 
 ## Files
 
-- `greeting.js` — single project file with Greeting Builder
+- `greetingBuilder.js` — single project file with Greeting Builder
 
 ## How to View
 
-run `greeting.js` in any JS compiler.
+run `greetingBuilder.js` in any JS compiler.
+
+# Temperature Converter
+
+https://roadmap.sh/projects/js-temperature-converter
+
+## Files
+
+- `temperatureConverter.js` — single project file with Temperature Converter
+
+## How to View
+
+run `temperatureConverter.js` in any JS compiler.

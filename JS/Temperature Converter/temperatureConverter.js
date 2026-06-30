@@ -1,0 +1,22 @@
+const space = " ";
+
+function celsiusToFahrenheit(celsius) {
+    return celsius * 1.8 + 32;
+};
+
+function fahrenheitToCelsius(fahrenheit) {
+    return (fahrenheit - 32) / 1.8
+};
+
+function formatTemperature(value, unit) {
+    return value + space + String(unit);
+};
+
+const fahrenheit = celsiusToFahrenheit(25);
+console.log(formatTemperature(fahrenheit, 'F'));
+const celsius = fahrenheitToCelsius(68);
+console.log(formatTemperature(celsius, 'C'));
+const freezingFahrenheit = celsiusToFahrenheit(0);
+console.log(formatTemperature(freezingFahrenheit, 'F'));
+const freezingCelsius = fahrenheitToCelsius(32);
+console.log(formatTemperature(freezingCelsius, 'C'));
