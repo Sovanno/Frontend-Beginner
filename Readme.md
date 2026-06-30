@@ -210,3 +210,15 @@ https://roadmap.sh/projects/js-temperature-converter
 ## How to View
 
 run `temperatureConverter.js` in any JS compiler.
+
+# Number Checker
+
+https://roadmap.sh/projects/js-number-checker
+
+## Files
+
+- `numberChecker.js` — single project file with Number Checker
+
+## How to View
+
+run `numberChecker.js` in any JS compiler.
