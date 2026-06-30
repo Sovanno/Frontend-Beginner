@@ -1,0 +1,353 @@
+/* ========== Импорт шрифта ========== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700&display=swap');
+
+/* ========== Сброс и базовые настройки ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========== CSS-переменные (светлая тема по умолчанию) ========== */
+:root {
+  --bg: #ffffff;
+  --text: #1a1a1a;
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --secondary: #f8fafc;
+  --border: #e2e8f0;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --radius: 12px;
+  --font: 'Inter', system-ui, -apple-system, sans-serif;
+  --transition: 0.25s ease;
+}
+
+body.dark {
+  --bg: #0f172a;
+  --text: #f1f5f9;
+  --secondary: #1e293b;
+  --border: #334155;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+}
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  padding: 1.5rem;
+  transition: background var(--transition), color var(--transition);
+}
+
+/* ========== Контейнер ========== */
+main,
+header,
+footer {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 0.5rem;
+}
+
+/* ========== Шапка и навигация ========== */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1rem 0.5rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 2rem;
+}
+
+header img {
+  height: 36px;
+  width: auto;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  list-style: none;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  padding: 0.4rem 0;
+  border-bottom: 2px solid transparent;
+  transition: border-color var(--transition), color var(--transition);
+}
+
+nav a:hover {
+  border-bottom-color: var(--primary);
+  color: var(--primary);
+}
+
+/* ========== Основной контент (главная) ========== */
+main {
+  display: grid;
+  gap: 2rem;
+}
+
+/* Десктоп: две колонки – основное + aside */
+@media (min-width: 768px) {
+  main {
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+  }
+  /* Aside (отзывы) на десктопе занимает правую колонку */
+  aside {
+    grid-column: 2 / 3;
+    grid-row: 1 / span 4;
+  }
+}
+
+/* Секции */
+section,
+aside {
+  background: var(--secondary);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  transition: background var(--transition), border var(--transition);
+}
+
+section h2,
+aside h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--primary);
+}
+
+section h3 {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+/* ========== Герой (первая секция) ========== */
+section:first-of-type {
+  text-align: center;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+section:first-of-type h1 {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+section:first-of-type p {
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+/* ========== Проекты, опыт, образование ========== */
+section ul {
+  list-style: none;
+  padding: 0;
+}
+
+section ul li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+section ul li:last-child {
+  border-bottom: none;
+}
+
+section ul li a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+section ul li a:hover {
+  text-decoration: underline;
+}
+
+article {
+  margin-top: 1rem;
+}
+
+article a {
+  display: inline-block;
+  margin-top: 0.3rem;
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+article a:hover {
+  text-decoration: underline;
+}
+
+/* ========== Отзывы (aside) ========== */
+aside blockquote {
+  margin: 1rem 0;
+  padding: 1rem;
+  background: var(--bg);
+  border-radius: var(--radius);
+  border-left: 4px solid var(--primary);
+}
+
+aside blockquote p {
+  font-style: italic;
+}
+
+aside blockquote footer {
+  margin-top: 0.3rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+/* ========== Страницы проектов и статей ========== */
+main > h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  grid-column: 1 / -1;
+}
+
+main > ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  grid-column: 1 / -1;
+}
+
+main > ul li {
+  background: var(--secondary);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+main > ul li h2 {
+  font-size: 1.3rem;
+}
+
+main > ul li p {
+  margin-top: 0.3rem;
+}
+
+/* ========== Контактная форма ========== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+  background: var(--secondary);
+  padding: 2rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+form label {
+  font-weight: 600;
+}
+
+form input,
+form textarea {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+  background: var(--bg);
+  color: var(--text);
+  transition: border-color var(--transition);
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+form button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--transition), transform 0.15s;
+}
+
+form button:hover {
+  background: var(--primary-hover);
+}
+
+form button:active {
+  transform: scale(0.97);
+}
+
+/* ========== Футер ========== */
+footer {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* ========== Адаптивность для мобильных ========== */
+@media (max-width: 767px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  #theme-toggle {
+    margin-top: 0.5rem;
+  }
+
+  main {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  aside {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  section:first-of-type h1 {
+    font-size: 2.2rem;
+  }
+
+  form {
+    padding: 1.5rem;
+  }
+}
+
+/* ========== Уважение к motion reduction ========== */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

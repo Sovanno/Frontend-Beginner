@@ -1,3 +1,6 @@
+<!-- HTML tasks -->
+
+
 # Single-Page CV.
 
 https://roadmap.sh/projects/single-page-cv
@@ -72,3 +75,19 @@ https://roadmap.sh/projects/photo-showcase
 ## How to View
 
 Open `Showcase.html` in any browser.
+
+
+<!-- CSS tasks -->
+
+
+# Personal Portfolio
+
+https://roadmap.sh/projects/portfolio-website
+
+## Files
+
+- `Portfolio.css` — single project file with photo showcase
+
+## How to View
+
+Open `Homepage.html` in any browser.
