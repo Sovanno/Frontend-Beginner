@@ -246,3 +246,15 @@ https://roadmap.sh/projects/js-price-calculator
 ## How to View
 
 run `priceCalculator.js` in any JS compiler.
+
+# Cart Total Calculator
+
+https://roadmap.sh/projects/js-cart-total-calculator
+
+## Files
+
+- `cartTotalCalculator.js` — single project file with Cart Total Calculator
+
+## How to View
+
+run `cartTotalCalculator.js` in any JS compiler.
