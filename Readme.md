@@ -222,3 +222,15 @@ https://roadmap.sh/projects/js-number-checker
 ## How to View
 
 run `numberChecker.js` in any JS compiler.
+
+# String Formatter
+
+https://roadmap.sh/projects/js-string-formatter
+
+## Files
+
+- `stringFormatter.js` — single project file with String Formatter
+
+## How to View
+
+run `stringFormatter.js` in any JS compiler.
