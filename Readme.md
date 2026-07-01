@@ -234,3 +234,15 @@ https://roadmap.sh/projects/js-string-formatter
 ## How to View
 
 run `stringFormatter.js` in any JS compiler.
+
+# Price Calculator
+
+https://roadmap.sh/projects/js-price-calculator
+
+## Files
+
+- `priceCalculator.js` — single project file with Price Calculator
+
+## How to View
+
+run `priceCalculator.js` in any JS compiler.
