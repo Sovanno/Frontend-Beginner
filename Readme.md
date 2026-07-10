@@ -258,3 +258,15 @@ https://roadmap.sh/projects/js-cart-total-calculator
 ## How to View
 
 run `cartTotalCalculator.js` in any JS compiler.
+
+# Grade Report Generator
+
+https://roadmap.sh/projects/js-grade-report-generator
+
+## Files
+
+- `gradeReportGenerator.js` — single project file with Grade Report Generator
+
+## How to View
+
+run `gradeReportGenerator.js` in any JS compiler.
