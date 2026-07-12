@@ -282,3 +282,15 @@ https://roadmap.sh/projects/js-task-list-utilities
 ## How to View
 
 run `taskListUtilities.js` in any JS compiler.
+
+# Expense Summary
+
+https://roadmap.sh/projects/js-expense-summary
+
+## Files
+
+- `expenseSummary.js` — single project file with Expense Summary
+
+## How to View
+
+run `expenseSummary.js` in any JS compiler.
