@@ -270,3 +270,15 @@ https://roadmap.sh/projects/js-grade-report-generator
 ## How to View
 
 run `gradeReportGenerator.js` in any JS compiler.
+
+# Task List Utilities
+
+https://roadmap.sh/projects/js-task-list-utilities
+
+## Files
+
+- `taskListUtilities.js` — single project file with Task List Utilities
+
+## How to View
+
+run `taskListUtilities.js` in any JS compiler.
