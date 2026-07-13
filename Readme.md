@@ -318,3 +318,15 @@ https://roadmap.sh/projects/js-user-profile-formatter
 ## How to View
 
 run `userProfileFormatter.js` in any JS compiler.
+
+# Quiz Score Calculator
+
+https://roadmap.sh/projects/js-quiz-score-calculator
+
+## Files
+
+- `quizScoreCalculator.js` — single project file with Quiz Score Calculator
+
+## How to View
+
+run `quizScoreCalculator.js` in any JS compiler.
