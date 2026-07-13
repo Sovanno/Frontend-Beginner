@@ -306,3 +306,15 @@ https://roadmap.sh/projects/js-product-search-and-filter
 ## How to View
 
 run `productSearch&Filter.js` in any JS compiler.
+
+# User Profile Formatter
+
+https://roadmap.sh/projects/js-user-profile-formatter
+
+## Files
+
+- `userProfileFormatter.js` — single project file with User Profile Formatter
+
+## How to View
+
+run `userProfileFormatter.js` in any JS compiler.
