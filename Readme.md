@@ -294,3 +294,15 @@ https://roadmap.sh/projects/js-expense-summary
 ## How to View
 
 run `expenseSummary.js` in any JS compiler.
+
+# Product Search and Filter
+
+https://roadmap.sh/projects/js-product-search-and-filter
+
+## Files
+
+- `productSearch&Filter.js` — single project file with Product Search and Filter
+
+## How to View
+
+run `productSearch&Filter.js` in any JS compiler.
