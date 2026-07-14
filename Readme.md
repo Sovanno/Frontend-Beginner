@@ -354,3 +354,15 @@ https://roadmap.sh/projects/js-password-rule-checker
 ## How to View
 
 run `passwordRuleChecker.js` in any JS compiler.
+
+# Order Status Helper
+
+https://roadmap.sh/projects/js-order-status-helper
+
+## Files
+
+- `orderStatusHelper.js` — single project file with Order Status Helper
+
+## How to View
+
+run `orderStatusHelper.js` in any JS compiler.
