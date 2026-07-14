@@ -330,3 +330,15 @@ https://roadmap.sh/projects/js-quiz-score-calculator
 ## How to View
 
 run `quizScoreCalculator.js` in any JS compiler.
+
+# JSON Response Normalizer
+
+https://roadmap.sh/projects/js-json-response-normalizer
+
+## Files
+
+- `jsonResponseNormalizer.js` — single project file with JSON Response Normalizer
+
+## How to View
+
+run `jsonResponseNormalizer.js` in any JS compiler.
