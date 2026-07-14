@@ -330,3 +330,39 @@ https://roadmap.sh/projects/js-quiz-score-calculator
 ## How to View
 
 run `quizScoreCalculator.js` in any JS compiler.
+
+# JSON Response Normalizer
+
+https://roadmap.sh/projects/js-json-response-normalizer
+
+## Files
+
+- `jsonResponseNormalizer.js` — single project file with JSON Response Normalizer
+
+## How to View
+
+run `jsonResponseNormalizer.js` in any JS compiler.
+
+# Password Rule Checker
+
+https://roadmap.sh/projects/js-password-rule-checker
+
+## Files
+
+- `passwordRuleChecker.js` — single project file with Password Rule Checker
+
+## How to View
+
+run `passwordRuleChecker.js` in any JS compiler.
+
+# Order Status Helper
+
+https://roadmap.sh/projects/js-order-status-helper
+
+## Files
+
+- `orderStatusHelper.js` — single project file with Order Status Helper
+
+## How to View
+
+run `orderStatusHelper.js` in any JS compiler.
