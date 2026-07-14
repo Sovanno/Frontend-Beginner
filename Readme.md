@@ -342,3 +342,15 @@ https://roadmap.sh/projects/js-json-response-normalizer
 ## How to View
 
 run `jsonResponseNormalizer.js` in any JS compiler.
+
+# Password Rule Checker
+
+https://roadmap.sh/projects/js-password-rule-checker
+
+## Files
+
+- `passwordRuleChecker.js` — single project file with Password Rule Checker
+
+## How to View
+
+run `passwordRuleChecker.js` in any JS compiler.
