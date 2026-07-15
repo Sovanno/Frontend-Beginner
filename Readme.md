@@ -366,3 +366,17 @@ https://roadmap.sh/projects/js-order-status-helper
 ## How to View
 
 run `orderStatusHelper.js` in any JS compiler.
+
+# Tabs
+
+https://roadmap.sh/projects/simple-tabs
+
+## Files
+
+- `tabs.html` — main HTML file with tab structure
+- `tabs.css` — styles for tab interface
+- `tabs.js` — JavaScript for tab switching functionality
+
+## How to View
+
+Open `tabs.html` in any browser.
