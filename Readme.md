@@ -380,3 +380,17 @@ https://roadmap.sh/projects/simple-tabs
 ## How to View
 
 Open `tabs.html` in any browser.
+
+# Cookie Consent
+
+https://roadmap.sh/projects/cookie-consent
+
+## Files
+
+- `cookie.html` — main HTML file with cookie consent banner structure
+- `cookie.css` — styles for cookie banner and page layout
+- `cookie.js` — JavaScript for banner functionality and localStorage management
+
+## How to View
+
+Open `cookie.html` in any browser.
